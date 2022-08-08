@@ -1,4 +1,4 @@
-import { Controller ,Get,All,Post, Body,Param, HttpCode} from '@nestjs/common';
+import { Controller ,Get,All,Post, Body,Param, HttpCode, Query} from '@nestjs/common';
 
 @Controller('roles')
 export class RolesController {
@@ -33,6 +33,13 @@ export class RolesController {
         return "hii the date is " + a.date
 
 
+    }
+
+
+
+    @Get('list')
+    quData(@Query() data:any){
+        return "name is " + data.name
     }
 
 
