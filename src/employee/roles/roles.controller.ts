@@ -1,4 +1,4 @@
-import { Controller ,Get,All,Post, Body,Param} from '@nestjs/common';
+import { Controller ,Get,All,Post, Body,Param, HttpCode} from '@nestjs/common';
 
 @Controller('roles')
 export class RolesController {
@@ -27,6 +27,7 @@ export class RolesController {
 
 
     @Get("month/:date")
+    @HttpCode(404)
     monthDate(@Param() a:any){
         console.log("hii is is" + a.date)
         return "hii the date is " + a.date
