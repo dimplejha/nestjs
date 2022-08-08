@@ -38,7 +38,7 @@ export class RolesController {
 
 
     @Get('list')
-    quData(@Query() data:any){
+    quData(@Query() data:any):string{
         return "name is " + data.name
     }
 
