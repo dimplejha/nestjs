@@ -14,16 +14,13 @@ import {AuthMiddleware} from './middleware/auth';
 export class AppModule implements NestModule{
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(AuthMiddleware)
-    .forRoutes('posts')
+    // .forRoutes('posts')
+    .forRoutes({
+      path:'posts/post-list',method:RequestMethod.GET
+    })
   }
 
 
-  // new changes are here
-
-
-  //addeded data
-
-
-  //gpg
+  
 
 }
